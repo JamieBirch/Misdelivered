@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7896733725177596517
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 291716173863370072, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291716173863370072, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291716173863370072, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291716173863370072, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291716173863370072, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 291716173863370072, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291716173863370072, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291716173863370072, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291716173863370072, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291716173863370072, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291716173863370072, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291716173863370073, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: m_Name
+      value: Terminator
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: Name
+      value: Terminator
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: secretMatch
+      value: 
+      objectReference: {fileID: 3574990593779483040, guid: 676a7512e2619144480ffc0fa59fac81, type: 3}
+    - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: desiredMatch
+      value: 
+      objectReference: {fileID: 3326790756581959360, guid: 44fb4079c94058741841d7f2f72d7a96, type: 3}
+    - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: defaultReaction
+      value: Not my order. So I'll be back! With a negative feedback!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: secretMatchReaction
+      value: Not mine order. Incorrect! But I need more power. It stays. You go.
+        Go out here, if you want to live! And have a nice day!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: desiredMatchReaction
+      value: That's it! Now I need your... some paper to sign?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
