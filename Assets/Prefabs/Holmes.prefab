@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7896733725177596517
+--- !u!1001 &2238606668470000862
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -53,36 +53,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 291716173863370073, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: m_Name
-      value: Terminator
+      value: Holmes
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: Name
-      value: Terminator
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: character
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: secretMatch
       value: 
-      objectReference: {fileID: 3574990593779483040, guid: 676a7512e2619144480ffc0fa59fac81, type: 3}
+      objectReference: {fileID: 3574990593779483040, guid: ac3bc102406fe5b47854f07ca71b78b8, type: 3}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: desiredMatch
       value: 
-      objectReference: {fileID: 3326790756581959360, guid: 44fb4079c94058741841d7f2f72d7a96, type: 3}
+      objectReference: {fileID: 3574990593779483040, guid: d7d1a4b1bb2556f4fb8c0c3a2526c97a, type: 3}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: defaultReaction
-      value: Not my order. So I'll be back! With a negative feedback!
+      value: It's a huge mistake, my good sir! I've ordered something more useful,
+        of course. It was elementary, my dear! And you failed.
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: secretMatchReaction
-      value: Not mine order. Incorrect! But I need more power. It stays. You go.
-        Go out here, if you want to live! And have a nice day!
+      value: Not my order... But I'll recognise a crime, when I see it, my good sir!
+        But where is the rest of victim? Curios, I love it!
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: desiredMatchReaction
-      value: That's it! Now I need your... some paper to sign?
+      value: Good day to you, my good sir! The mystery of slow delivery has finally
+        been solved! Take care of yourself, good sir!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}

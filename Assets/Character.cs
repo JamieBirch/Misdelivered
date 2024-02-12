@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class Character : MonoBehaviour
 {
-    public Image image;
-    public string Name;
+    // public Sprite sprite;
+    public ReferenceCharacters character;
 
     public Package desiredMatch;
     public Package secretMatch;

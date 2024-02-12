@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class Door : MonoBehaviour
 {
-    public Image image;
-    public Text characterName;
+    public Sprite imageClosed;
+    public Sprite imageOpen;
 }

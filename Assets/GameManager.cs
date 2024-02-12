@@ -1,12 +1,17 @@
-using System.Collections;
+using System;
+using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Scenario scenario;
+    public DoorPanel DoorPanel;
+    public DoorsDictionary DoorsDictionary;
+    public CharactersDictionary CharactersDictionary;
     
     public string facehuggerDefaultReaction;
     
@@ -25,20 +30,13 @@ public class GameManager : MonoBehaviour
     public PackageSelection selection1;
     public PackageSelection selection2;
     public PackageSelection selection3;
+    public PackageSelection selection4;
+    public PackageSelection selection5;
     
     public Package facegrab;
     public Package kitten;
     public Package motorcycle;
     public Package teslaCoil;
-
-    
-    //TODO remove after GenerateScenario() implemented
-
-    public Door door1;
-    public Door door2;
-    public Character char1;
-    public Character char2;
-    
     
     private void Awake()
     {
@@ -82,6 +80,8 @@ public class GameManager : MonoBehaviour
         characterName.gameObject.SetActive(true);
 
         Thread.Sleep(3000);
+        DoorPanel.ChangeSprite(currentRound.GetDoor().imageOpen);
+
         // Waiter(4);
         //TODO
         string packageReaction = currentRound.GetCharacter().ReactToPackage(package);
@@ -109,11 +109,14 @@ public class GameManager : MonoBehaviour
 
     private void NextRound()
     {
+        //TODO fade
+        
         currentRound = scenario.GetRound(currentRoundIndex);
         
         //TODO show next round
         //show door
-        characterName.text = currentRound.GetCharacter().Name;
+        DoorPanel.ChangeSprite(currentRound.GetDoor().imageClosed);
+        characterName.text = currentRound.GetCharacter().character.ToString();
         
         //TODO update when GenerateScenario() implemented
         if (currentRoundIndex == 0)
@@ -138,24 +141,41 @@ public class GameManager : MonoBehaviour
 
     private Scenario GenerateScenario()
     {
-        // Scenario scenario = new Scenario(rounds);
-        Scenario scenario = DefaultScenario();
-        //TODO
-        //doors
-        /*for (int i = 0; i < rounds; i++)
-        {
-            //TODO create rounds
-        }*/
+        Scenario scenario = new Scenario(rounds);
+        Array values = Enum.GetValues(typeof(ReferenceCharacters));
+        
+        var rndIndexes = GenerateRandomIndexes(values);
+
+        CreateRounds(rndIndexes, values, scenario);
 
         return scenario;
     }
 
-    private Scenario DefaultScenario()
+    private void CreateRounds(HashSet<int> rndIndexes, Array values, Scenario scenario)
     {
-        Scenario scenario = new Scenario(2);
-        scenario.CreateRound(0, door1, char1);
-        scenario.CreateRound(1, door2, char2);
-        return scenario;
+        int i = 0;
+        foreach (int num in rndIndexes)
+        {
+            ReferenceCharacters randomCharacter = (ReferenceCharacters)values.GetValue(num);
+            scenario.CreateRound(i, DoorsDictionary.GetDoor(randomCharacter),
+                CharactersDictionary.GetCharacter(randomCharacter));
+            i++;
+        }
+    }
+
+    private HashSet<int> GenerateRandomIndexes(Array values)
+    {
+        Random random = new Random();
+        HashSet<int> rndIndexes = new HashSet<int>();
+        int iter = 0;
+        while (rndIndexes.Count != rounds)
+        {
+            int index = random.Next(values.Length);
+            rndIndexes.Add(index);
+            iter++;
+        }
+
+        return rndIndexes;
     }
 
     void EndGame()
