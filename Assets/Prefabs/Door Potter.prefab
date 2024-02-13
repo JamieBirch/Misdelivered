@@ -10,14 +10,14 @@ PrefabInstance:
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageOpen
       value: 
-      objectReference: {fileID: 21300000, guid: 68e5a78013e33f247822a837e55b0ab4, type: 3}
+      objectReference: {fileID: 21300000, guid: 34fd5e57e4a70bb469debd89159c58f1, type: 3}
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageClosed
       value: 
-      objectReference: {fileID: 21300000, guid: 803b0b9bfc1fd824aae8423bfbab83b4, type: 3}
+      objectReference: {fileID: 21300000, guid: beade40a520d72845aae0c57deb548f3, type: 3}
     - target: {fileID: 7583678017058292676, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: m_Name
-      value: Door Terminator
+      value: Door Potter
       objectReference: {fileID: 0}
     - target: {fileID: 8796369366983325760, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: m_RootOrder
