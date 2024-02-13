@@ -301,6 +301,59 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &57608542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57608544}
+  - component: {fileID: 57608543}
+  m_Layer: 0
+  m_Name: PackagesDictionary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &57608543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57608542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bdd6fbc41394b641b1f9badc55b6d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alienPackage: {fileID: 4665878599964040819, guid: fc5a8372c1dc7f0408fa6b1b974c0293, type: 3}
+  terminatorPackage: {fileID: 3326790756581959360, guid: 44fb4079c94058741841d7f2f72d7a96, type: 3}
+  pikachuPackage: {fileID: 3574990593779483040, guid: 676a7512e2619144480ffc0fa59fac81, type: 3}
+  vazovskiPackage: {fileID: 3574990593779483040, guid: 52f8c762217f82642849b22545122937, type: 3}
+  witcherPackage: {fileID: 3574990593779483040, guid: 6a907fc190585144d8c451b80af6da65, type: 3}
+  holmesPackage: {fileID: 3574990593779483040, guid: d7d1a4b1bb2556f4fb8c0c3a2526c97a, type: 3}
+  potterPackage: {fileID: 3574990593779483040, guid: 9b22faa04f57d3f4fbfdb96c976bc3ad, type: 3}
+  gollumPackage: {fileID: 3574990593779483040, guid: ac3bc102406fe5b47854f07ca71b78b8, type: 3}
+  girlPackage: {fileID: 1472596067155067139, guid: 53bfc47e8498c5b40986c9a022cb6883, type: 3}
+--- !u!4 &57608544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57608542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &93788307
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,6 +2526,7 @@ MonoBehaviour:
   DoorPanel: {fileID: 420548465}
   DoorsDictionary: {fileID: 256539854}
   CharactersDictionary: {fileID: 1631688173}
+  PackagesDictionary: {fileID: 57608543}
   facehuggerDefaultReaction: Facehugger attack! %*&*#!!!
   log: {fileID: 1556705482}
   characterName: {fileID: 227066114}
@@ -2484,10 +2538,6 @@ MonoBehaviour:
   selection3: {fileID: 1092434087}
   selection4: {fileID: 1776159156}
   selection5: {fileID: 1657312556}
-  facegrab: {fileID: 4665878599964040819, guid: fc5a8372c1dc7f0408fa6b1b974c0293, type: 3}
-  kitten: {fileID: 1472596067155067139, guid: 53bfc47e8498c5b40986c9a022cb6883, type: 3}
-  motorcycle: {fileID: 3326790756581959360, guid: 44fb4079c94058741841d7f2f72d7a96, type: 3}
-  teslaCoil: {fileID: 3574990593779483040, guid: 676a7512e2619144480ffc0fa59fac81, type: 3}
 --- !u!4 &1729293831
 Transform:
   m_ObjectHideFlags: 0

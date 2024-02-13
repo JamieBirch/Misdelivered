@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     public DoorPanel DoorPanel;
     public DoorsDictionary DoorsDictionary;
     public CharactersDictionary CharactersDictionary;
+    public PackagesDictionary PackagesDictionary;
     
     public string facehuggerDefaultReaction;
     
@@ -26,6 +28,8 @@ public class GameManager : MonoBehaviour
     //TODO define next round condition
     public bool showNextRound = false;
 
+    private PackageSelection[] _packageSelections;
+    
     //TODO assign packages to buttons - one set per round
     public PackageSelection selection1;
     public PackageSelection selection2;
@@ -33,15 +37,11 @@ public class GameManager : MonoBehaviour
     public PackageSelection selection4;
     public PackageSelection selection5;
     
-    public Package facegrab;
-    public Package kitten;
-    public Package motorcycle;
-    public Package teslaCoil;
-    
     private void Awake()
     {
         instance = this;
-        characterName.gameObject.SetActive(false);
+        // characterName.gameObject.SetActive(false);
+        _packageSelections = new[] { selection1, selection2, selection3, selection4, selection5 };
     }
     
     // Start is called before the first frame update
@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         
-        if (showNextRound == true)
+        if (showNextRound)
         {
             showNextRound = false;
             if (currentRoundIndex < rounds)
@@ -77,20 +77,21 @@ public class GameManager : MonoBehaviour
     public void GivePackage(Package package)
     {
         //open Door
-        characterName.gameObject.SetActive(true);
+        // characterName.gameObject.SetActive(true);
 
         Thread.Sleep(3000);
         DoorPanel.ChangeSprite(currentRound.GetDoor().imageOpen);
 
         // Waiter(4);
         //TODO
+        Debug.Log("Giving " + package.name + " to " + currentRound.GetCharacter().name);
         string packageReaction = currentRound.GetCharacter().ReactToPackage(package);
         log.text = log.text + "\n > " + packageReaction;
 
         //Next round!
         currentRoundIndex++;
         showNextRound = true;
-        characterName.gameObject.SetActive(false);
+        // characterName.gameObject.SetActive(false);
     }
 
     /*void Waiter(float waitTime)
@@ -118,30 +119,32 @@ public class GameManager : MonoBehaviour
         DoorPanel.ChangeSprite(currentRound.GetDoor().imageClosed);
         characterName.text = currentRound.GetCharacter().character.ToString();
         
-        //TODO update when GenerateScenario() implemented
-        if (currentRoundIndex == 0)
+        Random random = new Random();
+        HashSet<ReferenceCharacters> charactersSet = new HashSet<ReferenceCharacters>();
+        Array values = Enum.GetValues(typeof(ReferenceCharacters));
+        charactersSet.Add(currentRound.GetCharacter().desiredMatch.character);
+        charactersSet.Add(currentRound.GetCharacter().secretMatch.character);
+        while (charactersSet.Count != 5)
         {
-            selection1.package = facegrab;
-            selection1.text.text = selection1.package.Name;
-            selection2.package = kitten;
-            selection2.text.text = selection2.package.Name;
-            selection3.package = motorcycle;
-            selection3.text.text = selection3.package.Name;
+            int index = random.Next(values.Length);
+            charactersSet.Add((ReferenceCharacters)values.GetValue(index));
         }
-        else
+
+        IList<ReferenceCharacters> referenceCharactersList = Shuffle(charactersSet.ToList());
+        int i = 0;
+        foreach (ReferenceCharacters characterInList in referenceCharactersList)
         {
-            selection1.package = facegrab;
-            selection1.text.text = selection1.package.Name;
-            selection2.package = motorcycle;
-            selection2.text.text = selection2.package.Name;
-            selection3.package = teslaCoil;
-            selection3.text.text = selection3.package.Name;
+            Package package = PackagesDictionary.GetPackage(characterInList);
+            _packageSelections[i].package = package;
+            _packageSelections[i].text.text = package.name;
+            
+            i++;
         }
     }
 
     private Scenario GenerateScenario()
     {
-        Scenario scenario = new Scenario(rounds);
+        scenario = new Scenario(rounds);
         Array values = Enum.GetValues(typeof(ReferenceCharacters));
         
         var rndIndexes = GenerateRandomIndexes(values);
@@ -182,5 +185,19 @@ public class GameManager : MonoBehaviour
     {
         GameIsOver = true;
         log.text = log.text + "\n > " + "Game Over";
+    }
+    
+    public static IList<T> Shuffle<T>(IList<T> list)  
+    {  
+        Random rng = new Random();
+        
+        int n = list.Count;  
+        while (n > 1) {  
+            n--;  
+            int k = rng.Next(n + 1);  
+            (list[k], list[n]) = (list[n], list[k]);
+        }
+
+        return list;
     }
 }

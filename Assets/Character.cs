@@ -24,7 +24,7 @@ public class Character : MonoBehaviour
             return secretMatchReaction;
         }
 
-        if (package.Name == "Facehugger")
+        if (package.character == ReferenceCharacters.Alien)
         {
             return GameManager.instance.facehuggerDefaultReaction;
         }

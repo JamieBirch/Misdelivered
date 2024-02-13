@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: Name
       value: Hat
       objectReference: {fileID: 0}
+    - target: {fileID: 4999515825685791049, guid: ccd4194937666954e9c9fb8ab8ea95c1, type: 3}
+      propertyPath: character
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6787579481355956322, guid: ccd4194937666954e9c9fb8ab8ea95c1, type: 3}
       propertyPath: m_Name
       value: Package Hat
