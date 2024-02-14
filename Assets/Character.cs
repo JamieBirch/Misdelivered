@@ -2,7 +2,7 @@
 
 public class Character : MonoBehaviour
 {
-    // public Sprite sprite;
+    public Sprite sprite;
     public ReferenceCharacters character;
 
     public Package desiredMatch;

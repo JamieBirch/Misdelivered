@@ -3,11 +3,17 @@ using UnityEngine.UI;
 
 public class DoorPanel : MonoBehaviour
 {
-    public Image image;
+    public Image door;
+    public Image character;
 
-    public void ChangeSprite(Sprite newSprite)
+    public void ChangeDoor(Sprite newSprite)
     {
-        image.sprite = newSprite;
+        door.sprite = newSprite;
+    }
+    
+    public void ChangeCharacter(Sprite newSprite)
+    {
+        character.sprite = newSprite;
     }
     
 

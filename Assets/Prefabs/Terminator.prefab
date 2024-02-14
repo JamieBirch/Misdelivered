@@ -60,6 +60,10 @@ PrefabInstance:
       value: Terminator
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e9614be14a5be8c4d8dd83eff41e7799, type: 3}
+    - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: character
       value: 1
       objectReference: {fileID: 0}

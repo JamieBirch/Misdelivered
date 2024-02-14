@@ -14,6 +14,11 @@ public class GameManager : MonoBehaviour
     public DoorsDictionary DoorsDictionary;
     public CharactersDictionary CharactersDictionary;
     public PackagesDictionary PackagesDictionary;
+    public GameObject CharacterStanding;
+
+    public GameObject CharacterReactionPanel;
+    public Text CharacterReaction;
+    public GameObject NextRoundButton;
     
     public string facehuggerDefaultReaction;
     
@@ -47,10 +52,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        // CharacterStanding.SetActive(false);
         scenario = GenerateScenario();
         GameIsOver = false;
         // currentRound = scenario.GetRound(0);
-        showNextRound = true;
+        NextRound();
     }
     
     private void Update()
@@ -60,9 +66,9 @@ public class GameManager : MonoBehaviour
             return;
         }
         
-        if (showNextRound)
+        /*if (showNextRound)
         {
-            showNextRound = false;
+            // showNextRound = false;
             if (currentRoundIndex < rounds)
             {
                 NextRound();
@@ -71,27 +77,37 @@ public class GameManager : MonoBehaviour
             {
                 EndGame();
             }
-        }
+        }*/
     }
 
     public void GivePackage(Package package)
     {
         //open Door
-        // characterName.gameObject.SetActive(true);
+        if (CharacterStanding)
+        {
+            Debug.Log("Door opens!");
+            CharacterStanding.SetActive(true);
+            DoorPanel.ChangeCharacter(currentRound.GetCharacter().sprite);
+            // characterName.gameObject.SetActive(true);
+        }
+        CharacterReactionPanel.SetActive(true);
+        NextRoundButton.SetActive(true);
 
+        DoorPanel.ChangeDoor(currentRound.GetDoor().imageOpen);
         Thread.Sleep(3000);
-        DoorPanel.ChangeSprite(currentRound.GetDoor().imageOpen);
 
         // Waiter(4);
-        //TODO
         Debug.Log("Giving " + package.name + " to " + currentRound.GetCharacter().name);
         string packageReaction = currentRound.GetCharacter().ReactToPackage(package);
+        //TODO hide bubble 
+        CharacterReaction.text = packageReaction;
         log.text = log.text + "\n > " + packageReaction;
 
         //Next round!
-        currentRoundIndex++;
-        showNextRound = true;
+        // showNextRound = true;
+        // CharacterStanding.SetActive(false);
         // characterName.gameObject.SetActive(false);
+        currentRoundIndex++;
     }
 
     /*void Waiter(float waitTime)
@@ -108,15 +124,30 @@ public class GameManager : MonoBehaviour
         }
     }*/
 
-    private void NextRound()
+    public void NextRound()
     {
+        if (currentRoundIndex >= rounds)
+        {
+            EndGame();
+        }
+        
+        // showNextRound = false;
+        
+        //Hide objects of prev. round
+        if (CharacterStanding)
+        {
+            CharacterStanding.SetActive(false);
+        }
+        CharacterReactionPanel.SetActive(false);
+        NextRoundButton.SetActive(false);
+        
         //TODO fade
         
         currentRound = scenario.GetRound(currentRoundIndex);
         
         //TODO show next round
         //show door
-        DoorPanel.ChangeSprite(currentRound.GetDoor().imageClosed);
+        DoorPanel.ChangeDoor(currentRound.GetDoor().imageClosed);
         characterName.text = currentRound.GetCharacter().character.ToString();
         
         Random random = new Random();
@@ -134,12 +165,18 @@ public class GameManager : MonoBehaviour
         int i = 0;
         foreach (ReferenceCharacters characterInList in referenceCharactersList)
         {
-            Package package = PackagesDictionary.GetPackage(characterInList);
-            _packageSelections[i].package = package;
-            _packageSelections[i].text.text = package.name;
-            
+            AssignPackageToButton(characterInList, i);
             i++;
         }
+    }
+
+    private void AssignPackageToButton(ReferenceCharacters characterInList, int i)
+    {
+        Package package = PackagesDictionary.GetPackage(characterInList);
+        _packageSelections[i].package = package;
+        //TODO 
+        // _packageSelections[i].image.sprite = package.sprite;
+        _packageSelections[i].text.text = package.name;
     }
 
     private Scenario GenerateScenario()
@@ -184,7 +221,7 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         GameIsOver = true;
-        log.text = log.text + "\n > " + "Game Over";
+        CharacterReaction.text = "Game Over";
     }
     
     public static IList<T> Shuffle<T>(IList<T> list)  
