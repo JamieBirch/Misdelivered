@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public CharactersDictionary CharactersDictionary;
     public PackagesDictionary PackagesDictionary;
     public GameObject CharacterStanding;
+    public GameObject gameOverUI;
 
     public GameObject CharacterReactionPanel;
     public Text CharacterReaction;
@@ -65,19 +66,6 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-        
-        /*if (showNextRound)
-        {
-            // showNextRound = false;
-            if (currentRoundIndex < rounds)
-            {
-                NextRound();
-            }
-            else
-            {
-                EndGame();
-            }
-        }*/
     }
 
     public void GivePackage(Package package)
@@ -234,7 +222,9 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         GameIsOver = true;
-        CharacterReaction.text = "Game Over";
+        //TODO show end screen
+        gameOverUI.SetActive(true);
+        // CharacterReaction.text = "Game Over";
     }
     
     public static IList<T> Shuffle<T>(IList<T> list)  
