@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     
     public string facehuggerDefaultReaction;
     
-    public Text log;
+    // public Text log;
     public Text characterName;
     public int rounds;
     public int currentRoundIndex = 0;
@@ -96,34 +96,20 @@ public class GameManager : MonoBehaviour
         NextRoundButton.SetActive(true);
 
         DoorPanel.ChangeDoor(currentRound.GetDoor().imageOpen);
-        Thread.Sleep(3000);
 
-        // Waiter(4);
         Debug.Log("Giving " + package.name + " to " + currentRound.GetCharacter().name);
-        string packageReaction = currentRound.GetCharacter().ReactToPackage(package);
+        
+        ReactionOptions reaction = currentRound.GetCharacter().ReactToPackage(package);
+        string reactionText = currentRound.GetCharacter().GetReaction(reaction);
         //TODO hide bubble 
-        CharacterReaction.text = packageReaction;
-        log.text = log.text + "\n > " + packageReaction;
+        CharacterReaction.text = reactionText;
+        // log.text = log.text + "\n > " + reactionText;
 
         //Next round!
         // showNextRound = true;
         // CharacterStanding.SetActive(false);
         // characterName.gameObject.SetActive(false);
     }
-
-    /*void Waiter(float waitTime)
-    {
-        //Wait for 4 seconds
-        float counter = 0;
-
-        while (counter < waitTime)
-        {
-            //Increment Timer until counter >= waitTime
-            counter += Time.deltaTime;
-            Debug.Log("We have waited for: " + counter + " seconds");
-            
-        }
-    }*/
 
     public void NextRound()
     {

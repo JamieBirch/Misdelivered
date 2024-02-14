@@ -12,19 +12,43 @@ public class Character : MonoBehaviour
     public string secretMatchReaction;
     public string defaultReaction;
 
-    public string ReactToPackage(Package package)
+    public ReactionOptions ReactToPackage(Package package)
     {
         if (package == desiredMatch)
         {
-            return desiredMatchReaction;
+            return ReactionOptions.DesiredMatch;
+            // return desiredMatchReaction;
         }
 
         if (package == secretMatch)
         {
-            return secretMatchReaction;
+            return ReactionOptions.SecretMatch;
+            // return secretMatchReaction;
         }
 
         if (package.character == ReferenceCharacters.Alien)
+        {
+            return ReactionOptions.Facehugger;
+            // return GameManager.instance.facehuggerDefaultReaction;
+        }
+
+        return ReactionOptions.Misdelivery;
+        // return defaultReaction;
+    }
+    
+    public string GetReaction(ReactionOptions reactionOption)
+    {
+        if (reactionOption == ReactionOptions.DesiredMatch)
+        {
+            return desiredMatchReaction;
+        }
+
+        if (reactionOption == ReactionOptions.SecretMatch)
+        {
+            return secretMatchReaction;
+        }
+
+        if (reactionOption == ReactionOptions.Facehugger)
         {
             return GameManager.instance.facehuggerDefaultReaction;
         }
