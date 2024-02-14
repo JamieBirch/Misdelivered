@@ -2795,7 +2795,6 @@ MonoBehaviour:
   characterName: {fileID: 227066114}
   rounds: 5
   currentRoundIndex: 0
-  showNextRound: 0
   selection1: {fileID: 1840993339}
   selection2: {fileID: 93788309}
   selection3: {fileID: 1092434087}

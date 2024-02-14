@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public static bool GameIsOver;
 
     //TODO define next round condition
-    public bool showNextRound = false;
+    // public bool showNextRound = false;
 
     private PackageSelection[] _packageSelections;
     
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         scenario = GenerateScenario();
         GameIsOver = false;
         // currentRound = scenario.GetRound(0);
-        NextRound();
+        ShowCurrentRound();
     }
     
     private void Update()
@@ -82,6 +82,8 @@ public class GameManager : MonoBehaviour
 
     public void GivePackage(Package package)
     {
+        //TODO disable button press if on previous round 
+        
         //open Door
         if (CharacterStanding)
         {
@@ -107,7 +109,6 @@ public class GameManager : MonoBehaviour
         // showNextRound = true;
         // CharacterStanding.SetActive(false);
         // characterName.gameObject.SetActive(false);
-        currentRoundIndex++;
     }
 
     /*void Waiter(float waitTime)
@@ -126,13 +127,21 @@ public class GameManager : MonoBehaviour
 
     public void NextRound()
     {
+        currentRoundIndex++;
+        //TODO fade
+        ShowCurrentRound();
+    }
+
+    private void ShowCurrentRound()
+    {
+        Debug.Log("Round: " + currentRoundIndex);
+
         if (currentRoundIndex >= rounds)
         {
             EndGame();
+            return;
         }
-        
-        // showNextRound = false;
-        
+
         //Hide objects of prev. round
         if (CharacterStanding)
         {
@@ -140,16 +149,18 @@ public class GameManager : MonoBehaviour
         }
         CharacterReactionPanel.SetActive(false);
         NextRoundButton.SetActive(false);
-        
-        //TODO fade
-        
+
         currentRound = scenario.GetRound(currentRoundIndex);
-        
-        //TODO show next round
         //show door
         DoorPanel.ChangeDoor(currentRound.GetDoor().imageClosed);
+        //TODO remove this line when testing finished
         characterName.text = currentRound.GetCharacter().character.ToString();
-        
+
+        AssignPackagesToButtons();
+    }
+
+    private void AssignPackagesToButtons()
+    {
         Random random = new Random();
         HashSet<ReferenceCharacters> charactersSet = new HashSet<ReferenceCharacters>();
         Array values = Enum.GetValues(typeof(ReferenceCharacters));
