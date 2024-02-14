@@ -98,17 +98,33 @@ public class GameManager : MonoBehaviour
         DoorPanel.ChangeDoor(currentRound.GetDoor().imageOpen);
 
         Debug.Log("Giving " + package.name + " to " + currentRound.GetCharacter().name);
-        
+        //reaction
         ReactionOptions reaction = currentRound.GetCharacter().ReactToPackage(package);
+        CharacterReactionPanel.GetComponent<Image>().color = GetReactionColor(reaction);
         string reactionText = currentRound.GetCharacter().GetReaction(reaction);
-        //TODO hide bubble 
         CharacterReaction.text = reactionText;
-        // log.text = log.text + "\n > " + reactionText;
+        
 
-        //Next round!
-        // showNextRound = true;
-        // CharacterStanding.SetActive(false);
-        // characterName.gameObject.SetActive(false);
+    }
+
+    private Color GetReactionColor(ReactionOptions reaction)
+    {
+        if (reaction == ReactionOptions.DesiredMatch)
+        {
+            return Color.green;
+        }
+
+        if (reaction == ReactionOptions.SecretMatch)
+        {
+            return Color.yellow;
+        }
+
+        if (reaction == ReactionOptions.Facehugger)
+        {
+            return Color.gray;
+        }
+
+        return Color.red;
     }
 
     public void NextRound()
