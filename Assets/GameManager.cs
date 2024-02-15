@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = System.Random;
@@ -10,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public SceneFader sceneFader;
-
+    
     public Scenario scenario;
     public DoorPanel DoorPanel;
     public DoorsDictionary DoorsDictionary;
@@ -90,11 +89,29 @@ public class GameManager : MonoBehaviour
         Debug.Log("Giving " + package.name + " to " + currentRound.GetCharacter().name);
         //reaction
         ReactionOptions reaction = currentRound.GetCharacter().ReactToPackage(package);
+        UpdatePlayerStats(reaction);
         CharacterReactionPanel.GetComponent<Image>().color = GetReactionColor(reaction);
         string reactionText = currentRound.GetCharacter().GetReaction(reaction);
         CharacterReaction.text = reactionText;
         
 
+    }
+
+    private void UpdatePlayerStats(ReactionOptions reaction)
+    {
+        if (reaction == ReactionOptions.DesiredMatch)
+        {
+            PlayerStats.DesiredDeliveries++;
+            return;
+        }
+
+        if (reaction == ReactionOptions.SecretMatch)
+        {
+            PlayerStats.SecretDeliveries++;
+            return;
+        }
+        
+        return;
     }
 
     private Color GetReactionColor(ReactionOptions reaction)
