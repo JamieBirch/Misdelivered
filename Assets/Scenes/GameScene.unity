@@ -691,6 +691,16 @@ MonoBehaviour:
   centerText: {fileID: 1794855526}
   bottomText: {fileID: 1484097139}
   conclusionText: {fileID: 1963946606}
+  totalCount: 0
+  perfectDesiredEnding: Oh, look at you, getting everything right. Impressive...
+    I guess? Did you need a pat on the back for that? Next time, let's aim for something
+    that actually challenges you, huh?
+  perfectSecretEnding: "Well, well, well. Looks like someone was thinking outside
+    the box. Too bad they forgot the box is where they keep their stuff \u2013 like
+    their job. Yeah, you're fired. But hey, at least you're creative, right?"
+  goodEnding: 
+  badEnding: 
+  worstEnding: 
 --- !u!114 &191654709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4841,7 +4851,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 160, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1988051870
 GameObject:
