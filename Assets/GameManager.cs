@@ -9,6 +9,8 @@ using Random = System.Random;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public SceneFader sceneFader;
+
     public Scenario scenario;
     public DoorPanel DoorPanel;
     public DoorsDictionary DoorsDictionary;
@@ -117,6 +119,7 @@ public class GameManager : MonoBehaviour
 
     public void NextRound()
     {
+        sceneFader.FastFadeIn();
         currentRoundIndex++;
         //TODO fade
         ShowCurrentRound();

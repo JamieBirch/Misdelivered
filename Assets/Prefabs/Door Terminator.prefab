@@ -5,16 +5,17 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageOpen
       value: 
-      objectReference: {fileID: 21300000, guid: 34fd5e57e4a70bb469debd89159c58f1, type: 3}
+      objectReference: {fileID: -5758447453065905178, guid: 22f7ba525b4b6de46a09ccf2641f3516, type: 3}
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageClosed
       value: 
-      objectReference: {fileID: 21300000, guid: beade40a520d72845aae0c57deb548f3, type: 3}
+      objectReference: {fileID: -4337415787586843561, guid: 09d547f6b4c45f041bf24921396b7ce0, type: 3}
     - target: {fileID: 7583678017058292676, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: m_Name
       value: Door Terminator
@@ -64,4 +65,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}

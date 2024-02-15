@@ -5,16 +5,17 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageOpen
       value: 
-      objectReference: {fileID: 21300000, guid: 34fd5e57e4a70bb469debd89159c58f1, type: 3}
+      objectReference: {fileID: 7934715296728948106, guid: d2880ddda4061614ea2a4b23c2389b53, type: 3}
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageClosed
       value: 
-      objectReference: {fileID: 21300000, guid: 9c470a27b5f3bde4b8ea4eb110bf3c9d, type: 3}
+      objectReference: {fileID: -6328188563977406489, guid: dfef7d81d2e8ec7448acf70d7fc6ceb3, type: 3}
     - target: {fileID: 7583678017058292676, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: m_Name
       value: Door Alien
@@ -64,4 +65,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
