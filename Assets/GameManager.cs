@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdatePlayerStats(ReactionOptions reaction)
     {
+        PlayerStats.TotalDeliveries++;
         if (reaction == ReactionOptions.DesiredMatch)
         {
             PlayerStats.DesiredDeliveries++;

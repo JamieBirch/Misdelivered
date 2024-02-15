@@ -7,6 +7,8 @@ public class PlayerStats : MonoBehaviour
     public int showDesiredDeliveries;
     public static int SecretDeliveries;
     public  int showSecretDeliveries;
+    public static int TotalDeliveries;
+    public  int showTotalDeliveries;
     
     // Start is called before the first frame update
     void Start()
@@ -19,5 +21,6 @@ public class PlayerStats : MonoBehaviour
     {
         showDesiredDeliveries = DesiredDeliveries;
         showSecretDeliveries = SecretDeliveries;
+        showTotalDeliveries = TotalDeliveries;
     }
 }
