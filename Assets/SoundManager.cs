@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public static class SoundManager
 {
@@ -9,14 +10,27 @@ public static class SoundManager
         secretDelivery,
         wrongDelivery,
         facehuggerDelivery,
-        portal
+        portal,
+        sigh,
+        soundTrack
     }
-    
+
+    private static Dictionary<Sound, float> soundTimerDictionary;
+
+    public static void Initialize()
+    {
+        soundTimerDictionary = new Dictionary<Sound, float>();
+        soundTimerDictionary[Sound.sigh] = 0f;
+    }
+
     public static void PlaySound(Sound sound)
     {
-        GameObject soundGameObject = new GameObject("Sound");
-        AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.PlayOneShot(getAudioClip(sound));
+        if (CanPlaySound(sound))
+        {
+            GameObject soundGameObject = new GameObject("Sound");
+            AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+            audioSource.PlayOneShot(getAudioClip(sound));
+        }
     }
 
     private static AudioClip getAudioClip(Sound sound)
@@ -30,5 +44,43 @@ public static class SoundManager
         }
         Debug.LogError("matching audio not found");
         return null;
+    }
+
+    private static bool CanPlaySound(Sound sound)
+    {
+        switch (sound)
+        {
+            case Sound.sigh:
+                if (soundTimerDictionary.ContainsKey(sound))
+                {
+                    float lastTimePlayed = soundTimerDictionary[sound];
+                    float sighTimerMax = 0.5f;
+                    if (lastTimePlayed + sighTimerMax < Time.time)
+                    {
+                        soundTimerDictionary[sound] = Time.time;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                break;
+            default:
+                return true;
+        }
+        return true;
+    }
+    
+    public static void PlaySoundTrack()
+    {
+        // if (CanPlaySound(sound))
+        // {
+            GameObject soundGameObject = new GameObject("SoundTrack");
+            AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+            audioSource.loop = true;
+            audioSource.volume = 0.2f;
+            audioSource.PlayOneShot(getAudioClip(Sound.soundTrack));
+        // }
     }
 }

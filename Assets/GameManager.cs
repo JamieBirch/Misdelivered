@@ -57,7 +57,9 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         // characterName.gameObject.SetActive(false);
+        SoundManager.Initialize();
         _packageSelections = new[] { selection1, selection2, selection3, selection4, selection5 };
+        SoundManager.PlaySoundTrack();
     }
     
     // Start is called before the first frame update
@@ -76,6 +78,8 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
+        
+        // SoundManager.PlaySound(SoundManager.Sound.soundTrack);
     }
 
     public void GivePackage(Package package)
@@ -305,5 +309,10 @@ public class GameManager : MonoBehaviour
     {
         public SoundManager.Sound sound;
         public AudioClip audioClip;
+    }
+
+    public void PlayButtonHoverSound()
+    {
+        SoundManager.PlaySound(SoundManager.Sound.sigh);
     }
 }
