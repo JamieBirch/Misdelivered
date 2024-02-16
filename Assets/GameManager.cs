@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
     
     public string facehuggerDefaultReaction;
     
-    // public Text log;
     public Text characterName;
     public int rounds;
     public int currentRoundIndex = 0;
@@ -37,27 +36,12 @@ public class GameManager : MonoBehaviour
 
     public static bool GameIsOver;
 
-    //TODO define next round condition
-    // public bool showNextRound = false;
-
     public PackageSelection[] _packageSelections;
     
-    //TODO assign packages to buttons - one set per round
-    // public PackageSelection selection1;
-    // public PackageSelection selection2;
-    // public PackageSelection selection3;
-    // public PackageSelection selection4;
-    // public PackageSelection selection5;
-
     public SoundAudioClip[] soundClips;
     public AudioClip[] sighs;
-    
-    /*public AudioClip openDoor;
-    
-    public AudioClip correctDelivery;
-    public AudioClip secretDelivery;
-    public AudioClip wrongDelivery;
-    public AudioClip facehuggerDelivery;*/
+
+    public GameObject packageButtons;
     
     private void Awake()
     {
@@ -90,7 +74,8 @@ public class GameManager : MonoBehaviour
 
     public void GivePackage(Package package)
     {
-        //TODO disable button press if on previous round 
+        //TODO disable button press if on previous round
+        packageButtons.SetActive(false);
         
         //open Door
         //TODO: play sound openDoor
@@ -220,6 +205,7 @@ public class GameManager : MonoBehaviour
         //TODO remove this line when testing finished
         characterName.text = currentRound.GetCharacter().character.ToString();
 
+        packageButtons.SetActive(true);
         AssignPackagesToButtons();
     }
 
