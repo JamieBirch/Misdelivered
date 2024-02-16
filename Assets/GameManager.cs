@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
     // public PackageSelection selection5;
 
     public SoundAudioClip[] soundClips;
+    public AudioClip[] sighs;
     
     /*public AudioClip openDoor;
     

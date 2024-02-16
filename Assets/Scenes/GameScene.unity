@@ -729,7 +729,7 @@ MonoBehaviour:
     the box. Too bad they forgot the box is where they keep their stuff \u2013 like
     their job. Yeah, you're fired. But hey, at least you're creative, right?"
   goodEnding: Middle success, huh?! Win some, lose some, right? Acceptable! It's
-    impossible to please every taste. Or isn't it?
+    impossible to please every taste. Or is it?
   badEnding: So you've lost a list, lost a chances and right now you're losing your
     job! Incredible, huh! You're the worst courier I've ever seen! Hand over your
     badge at the exit. And a gun. No gun?! Huh, you're such a weirdo! Next!
@@ -4688,6 +4688,13 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: f10d06e1388b8404bb89e6e174ea2449, type: 3}
   - sound: 6
     audioClip: {fileID: 8300000, guid: 2ca5c0db4140449469e14d249b1ee169, type: 3}
+  sighs:
+  - {fileID: 8300000, guid: 2ca5c0db4140449469e14d249b1ee169, type: 3}
+  - {fileID: 8300000, guid: ef641ce4e85b97947b972c13436a9d61, type: 3}
+  - {fileID: 8300000, guid: 204598e260fb2a44ca0d76bdda6f61cf, type: 3}
+  - {fileID: 8300000, guid: 74015609ee26d2541a437bdaccdf4f9d, type: 3}
+  - {fileID: 8300000, guid: e38b12fab0d676c47b07b451cae54e52, type: 3}
+  - {fileID: 8300000, guid: 8650bbe6a2ce1974db889610ba0afcf4, type: 3}
 --- !u!4 &1729293831
 Transform:
   m_ObjectHideFlags: 0
