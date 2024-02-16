@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -15,6 +14,7 @@ public class PlayerStats : MonoBehaviour
     {
         DesiredDeliveries = 0;
         SecretDeliveries = 0;
+        TotalDeliveries = 0;
     }
 
     private void Update()
