@@ -247,9 +247,11 @@ public class GameManager : MonoBehaviour
     {
         Package package = PackagesDictionary.GetPackage(characterInList);
         _packageSelections[i].package = package;
+        _packageSelections[i].SetSprite();
         //TODO 
         // _packageSelections[i].image.sprite = package.sprite;
-        _packageSelections[i].text.text = package.name;
+        // _packageSelections[i].text.text = package.name;
+        // SetSprite();
     }
 
     private Scenario GenerateScenario()

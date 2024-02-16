@@ -11,11 +11,11 @@ PrefabInstance:
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageOpen
       value: 
-      objectReference: {fileID: 6084953799151556495, guid: 668f3e98fcde50548934641f043e4062, type: 3}
+      objectReference: {fileID: 21300000, guid: 668f3e98fcde50548934641f043e4062, type: 3}
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageClosed
       value: 
-      objectReference: {fileID: 5481270313874209879, guid: 985af7e70318ebc46b2f242824acf37b, type: 3}
+      objectReference: {fileID: 21300000, guid: 985af7e70318ebc46b2f242824acf37b, type: 3}
     - target: {fileID: 7583678017058292676, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: m_Name
       value: Door Girl

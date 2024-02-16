@@ -11,11 +11,11 @@ PrefabInstance:
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageOpen
       value: 
-      objectReference: {fileID: -1762973239968959216, guid: 054ec52ffabeffe4aa809a7f91d4e68b, type: 3}
+      objectReference: {fileID: 21300000, guid: 054ec52ffabeffe4aa809a7f91d4e68b, type: 3}
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageClosed
       value: 
-      objectReference: {fileID: -2572544640188837373, guid: 033e1d6679de4f24f80661180e8690c6, type: 3}
+      objectReference: {fileID: 21300000, guid: 033e1d6679de4f24f80661180e8690c6, type: 3}
     - target: {fileID: 7583678017058292676, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: m_Name
       value: Door Holmes

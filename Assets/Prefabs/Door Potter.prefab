@@ -11,11 +11,11 @@ PrefabInstance:
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageOpen
       value: 
-      objectReference: {fileID: -6607412339144228800, guid: f02cb75f4239aa54fbfde22c28bb43a2, type: 3}
+      objectReference: {fileID: 21300000, guid: f02cb75f4239aa54fbfde22c28bb43a2, type: 3}
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageClosed
       value: 
-      objectReference: {fileID: -6578834441150584550, guid: a8c057d9960afde43a97269c33c159d7, type: 3}
+      objectReference: {fileID: 21300000, guid: a8c057d9960afde43a97269c33c159d7, type: 3}
     - target: {fileID: 7583678017058292676, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: m_Name
       value: Door Potter

@@ -11,11 +11,11 @@ PrefabInstance:
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageOpen
       value: 
-      objectReference: {fileID: -7896507940842455076, guid: 8b1e350eea2167047847abd7d45cc479, type: 3}
+      objectReference: {fileID: 21300000, guid: 8b1e350eea2167047847abd7d45cc479, type: 3}
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageClosed
       value: 
-      objectReference: {fileID: -4401171928168974743, guid: 203e579e264ebe4488cf130523f2040f, type: 3}
+      objectReference: {fileID: 21300000, guid: 203e579e264ebe4488cf130523f2040f, type: 3}
     - target: {fileID: 7583678017058292676, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: m_Name
       value: Door Terminator
