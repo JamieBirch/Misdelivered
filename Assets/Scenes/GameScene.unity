@@ -728,9 +728,13 @@ MonoBehaviour:
   perfectSecretEnding: "Well, well, well. Looks like someone was thinking outside
     the box. Too bad they forgot the box is where they keep their stuff \u2013 like
     their job. Yeah, you're fired. But hey, at least you're creative, right?"
-  goodEnding: 
-  badEnding: 
-  worstEnding: 
+  goodEnding: Middle success, huh?! Win some, lose some, right? Acceptable! It's
+    impossible to please every taste. Or isn't it?
+  badEnding: So you've lost a list, lost a chances and right now you're losing your
+    job! Incredible, huh! You're the worst courier I've ever seen! Hand over your
+    badge at the exit. And a gun. No gun?! Huh, you're such a weirdo! Next!
+  worstEnding: How could you not deliver any packages correctly at all?! Huh, this
+    is a failure! Now I will only hire others AI, no more people! Next!
 --- !u!114 &191654709
 MonoBehaviour:
   m_ObjectHideFlags: 0
