@@ -11,11 +11,11 @@ PrefabInstance:
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageOpen
       value: 
-      objectReference: {fileID: 7934715296728948106, guid: d2880ddda4061614ea2a4b23c2389b53, type: 3}
+      objectReference: {fileID: 5869916635352154942, guid: b52a4a939054913409d13564e6011b23, type: 3}
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageClosed
       value: 
-      objectReference: {fileID: -6328188563977406489, guid: dfef7d81d2e8ec7448acf70d7fc6ceb3, type: 3}
+      objectReference: {fileID: -4944496525900465327, guid: 9d8c0d5f34a7e7045bfbbe5e379c184f, type: 3}
     - target: {fileID: 7583678017058292676, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: m_Name
       value: Door Alien

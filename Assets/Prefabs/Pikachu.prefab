@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: sprite
       value: 
-      objectReference: {fileID: 7290202028728560116, guid: a019385f15a968b4c92e362b41fd2daa, type: 3}
+      objectReference: {fileID: 21300000, guid: bc8637e7ab6103e4aaa538bab558f54c, type: 3}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: character
       value: 2

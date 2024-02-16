@@ -11,11 +11,11 @@ PrefabInstance:
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageOpen
       value: 
-      objectReference: {fileID: -3397624570848313739, guid: 472fc947c2502c64fa411c94540b8c72, type: 3}
+      objectReference: {fileID: 6838386504301101340, guid: 8632d500920e5dc45b54b4c8a33b177a, type: 3}
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageClosed
       value: 
-      objectReference: {fileID: 7103220622979130039, guid: 3c0692e7c08f3ba419db85e05e1ecbc9, type: 3}
+      objectReference: {fileID: -2696382071446365810, guid: 8e781fa781f990a4483cd74e8f8199a2, type: 3}
     - target: {fileID: 7583678017058292676, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: m_Name
       value: Door Witcher

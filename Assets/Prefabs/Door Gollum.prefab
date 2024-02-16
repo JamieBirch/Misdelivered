@@ -11,11 +11,11 @@ PrefabInstance:
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageOpen
       value: 
-      objectReference: {fileID: -2019695827362013772, guid: dd683c28e8e6cbf46afa3eae685437e5, type: 3}
+      objectReference: {fileID: -7754074928437728843, guid: 9e334ce4005bcee4e8632cbb7ade82d8, type: 3}
     - target: {fileID: 1449713601641002866, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: imageClosed
       value: 
-      objectReference: {fileID: 3177396115871152634, guid: 1fbaceede120fd046a71475a17b878d3, type: 3}
+      objectReference: {fileID: -3435274545717440426, guid: e4e2e4c7e987d4740aede40d2527d005, type: 3}
     - target: {fileID: 7583678017058292676, guid: f5489c293148d4a478d4cc75f330dd99, type: 3}
       propertyPath: m_Name
       value: Door Gollum
