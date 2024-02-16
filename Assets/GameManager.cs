@@ -43,6 +43,15 @@ public class GameManager : MonoBehaviour
     public PackageSelection selection3;
     public PackageSelection selection4;
     public PackageSelection selection5;
+
+    public SoundAudioClip[] soundClips;
+    
+    /*public AudioClip openDoor;
+    
+    public AudioClip correctDelivery;
+    public AudioClip secretDelivery;
+    public AudioClip wrongDelivery;
+    public AudioClip facehuggerDelivery;*/
     
     private void Awake()
     {
@@ -74,6 +83,9 @@ public class GameManager : MonoBehaviour
         //TODO disable button press if on previous round 
         
         //open Door
+        //TODO: play sound openDoor
+        SoundManager.PlaySound(SoundManager.Sound.knockAndScreech);
+        
         if (CharacterStanding)
         {
             Debug.Log("Door opens!");
@@ -94,6 +106,9 @@ public class GameManager : MonoBehaviour
         string reactionText = currentRound.GetCharacter().GetReaction(reaction);
         CharacterReaction.text = reactionText;
         
+        //TODO play sound: reaction sound
+        SoundManager.Sound reactionSound = GetReactionSound(reaction);
+        SoundManager.PlaySound(reactionSound);
 
     }
 
@@ -134,6 +149,26 @@ public class GameManager : MonoBehaviour
 
         return Color.red;
     }
+    
+    private SoundManager.Sound GetReactionSound(ReactionOptions reaction)
+    {
+        if (reaction == ReactionOptions.DesiredMatch)
+        {
+            return SoundManager.Sound.correctDelivery;
+        }
+
+        if (reaction == ReactionOptions.SecretMatch)
+        {
+            return SoundManager.Sound.secretDelivery;
+        }
+
+        if (reaction == ReactionOptions.Facehugger)
+        {
+            return SoundManager.Sound.facehuggerDelivery;
+        }
+
+        return SoundManager.Sound.wrongDelivery;
+    }
 
     public void NextRound()
     {
@@ -145,6 +180,9 @@ public class GameManager : MonoBehaviour
 
     private void ShowCurrentRound()
     {
+        //TODO play sound: portal sound
+        SoundManager.PlaySound(SoundManager.Sound.portal);
+        
         Debug.Log("Round: " + currentRoundIndex);
 
         if (currentRoundIndex >= rounds)
@@ -260,5 +298,12 @@ public class GameManager : MonoBehaviour
         }
 
         return list;
+    }
+
+    [System.Serializable]
+    public class SoundAudioClip
+    {
+        public SoundManager.Sound sound;
+        public AudioClip audioClip;
     }
 }

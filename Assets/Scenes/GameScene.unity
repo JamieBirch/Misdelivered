@@ -4436,7 +4436,7 @@ MonoBehaviour:
   CharacterReactionPanel: {fileID: 1116109371}
   CharacterReaction: {fileID: 61392443}
   NextRoundButton: {fileID: 1050270294}
-  facehuggerDefaultReaction: Facehugger attack! %*&*#!!!
+  facehuggerDefaultReaction: '%*&*#!!!'
   characterName: {fileID: 227066114}
   rounds: 3
   currentRoundIndex: 0
@@ -4445,6 +4445,19 @@ MonoBehaviour:
   selection3: {fileID: 1092434087}
   selection4: {fileID: 1776159156}
   selection5: {fileID: 1657312556}
+  soundClips:
+  - sound: 0
+    audioClip: {fileID: 8300000, guid: 1dfec688f19e46e44a0c7689ce7f2d3c, type: 3}
+  - sound: 1
+    audioClip: {fileID: 8300000, guid: 1befb33df9dcd614e9b0316cf4c5d333, type: 3}
+  - sound: 2
+    audioClip: {fileID: 8300000, guid: 07b4361d0b9b4594d95172a7e598b070, type: 3}
+  - sound: 3
+    audioClip: {fileID: 8300000, guid: f84c40a7516c1664f9a7cbd8337e96c9, type: 3}
+  - sound: 4
+    audioClip: {fileID: 8300000, guid: 33fe3566bff05c04fbe893f6773235bd, type: 3}
+  - sound: 5
+    audioClip: {fileID: 8300000, guid: d1884fddd50e0e1418d098f0d5470639, type: 3}
 --- !u!4 &1729293831
 Transform:
   m_ObjectHideFlags: 0
