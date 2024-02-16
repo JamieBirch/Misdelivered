@@ -33,7 +33,7 @@ public class GameOver : MonoBehaviour
     public void Retry ()
     {
         // Time.timeScale = 1f;
-        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
+        sceneFader.FadeTo("Intro scene");
     }
 
     private string GetFeedbackText()
