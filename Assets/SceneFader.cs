@@ -7,6 +7,7 @@ public class SceneFader : MonoBehaviour
 {
     public Image image;
     public AnimationCurve curve;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -14,9 +15,19 @@ public class SceneFader : MonoBehaviour
         StartCoroutine(FadeIn());
     }
 
-    public void FadeTo (string scene)
+    public void FadeTo(string scene)
     {
         StartCoroutine(FadeOut(scene));
+    }
+    
+    public void FadeToWithDelay()
+    {
+        Invoke(nameof(FadeToGameScreen), 3f);
+    }
+    
+    private void FadeToGameScreen()
+    {
+        StartCoroutine(FadeOut("GameScene"));
     }
 
     IEnumerator FadeIn()
