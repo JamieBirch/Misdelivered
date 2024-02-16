@@ -104,12 +104,7 @@ public class GameManager : MonoBehaviour
             // characterName.gameObject.SetActive(true);
         }
 
-        if (packageReactionSpot)
-        {
-            packageReactionSpot.SetActive(true);
-        }
-        
-        // packageReactionSpot.SetActive(true);
+        packageReactionSpot.SetActive(true);
         CharacterReactionPanel.SetActive(true);
         NextRoundButton.SetActive(true);
 
