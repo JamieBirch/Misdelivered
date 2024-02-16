@@ -15,8 +15,13 @@ public class GameManager : MonoBehaviour
     public DoorsDictionary DoorsDictionary;
     public CharactersDictionary CharactersDictionary;
     public PackagesDictionary PackagesDictionary;
+    public PackagesReactionSpotsDictionary PackagesReactionSpotsDictionary;
+    
     public GameObject CharacterStanding;
     public GameObject gameOverUI;
+    
+    public GameObject packageReactionSpot;
+    public Image packageReactionPanel;
 
     public GameObject CharacterReactionPanel;
     public Text CharacterReaction;
@@ -35,14 +40,14 @@ public class GameManager : MonoBehaviour
     //TODO define next round condition
     // public bool showNextRound = false;
 
-    private PackageSelection[] _packageSelections;
+    public PackageSelection[] _packageSelections;
     
     //TODO assign packages to buttons - one set per round
-    public PackageSelection selection1;
-    public PackageSelection selection2;
-    public PackageSelection selection3;
-    public PackageSelection selection4;
-    public PackageSelection selection5;
+    // public PackageSelection selection1;
+    // public PackageSelection selection2;
+    // public PackageSelection selection3;
+    // public PackageSelection selection4;
+    // public PackageSelection selection5;
 
     public SoundAudioClip[] soundClips;
     
@@ -58,7 +63,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         // characterName.gameObject.SetActive(false);
         SoundManager.Initialize();
-        _packageSelections = new[] { selection1, selection2, selection3, selection4, selection5 };
+        // _packageSelections = new[] { selection1, selection2, selection3, selection4, selection5 };
         SoundManager.PlaySoundTrack();
     }
     
@@ -97,6 +102,13 @@ public class GameManager : MonoBehaviour
             DoorPanel.ChangeCharacter(currentRound.GetCharacter().sprite);
             // characterName.gameObject.SetActive(true);
         }
+
+        if (packageReactionSpot)
+        {
+            packageReactionSpot.SetActive(true);
+        }
+        
+        // packageReactionSpot.SetActive(true);
         CharacterReactionPanel.SetActive(true);
         NextRoundButton.SetActive(true);
 
@@ -110,10 +122,18 @@ public class GameManager : MonoBehaviour
         string reactionText = currentRound.GetCharacter().GetReaction(reaction);
         CharacterReaction.text = reactionText;
         
+        //TODO show reaction spot
+        packageReactionPanel.GetComponent<Image>().sprite = GetReactionSpot(reaction);
+        
         //TODO play sound: reaction sound
         SoundManager.Sound reactionSound = GetReactionSound(reaction);
         SoundManager.PlaySound(reactionSound);
 
+    }
+
+    private Sprite GetReactionSpot(ReactionOptions reaction)
+    {
+        return PackagesReactionSpotsDictionary.GetPackageSpot(reaction);
     }
 
     private void UpdatePlayerStats(ReactionOptions reaction)
@@ -196,12 +216,7 @@ public class GameManager : MonoBehaviour
         }
 
         //Hide objects of prev. round
-        if (CharacterStanding)
-        {
-            CharacterStanding.SetActive(false);
-        }
-        CharacterReactionPanel.SetActive(false);
-        NextRoundButton.SetActive(false);
+        HideEverything();
 
         currentRound = scenario.GetRound(currentRoundIndex);
         //show door
@@ -210,6 +225,18 @@ public class GameManager : MonoBehaviour
         characterName.text = currentRound.GetCharacter().character.ToString();
 
         AssignPackagesToButtons();
+    }
+
+    private void HideEverything()
+    {
+        if (CharacterStanding)
+        {
+            CharacterStanding.SetActive(false);
+        }
+
+        CharacterReactionPanel.SetActive(false);
+        NextRoundButton.SetActive(false);
+        packageReactionSpot.SetActive(false);
     }
 
     private void AssignPackagesToButtons()
