@@ -78,19 +78,19 @@ PrefabInstance:
       objectReference: {fileID: 3574990593779483040, guid: 6a907fc190585144d8c451b80af6da65, type: 3}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: defaultReaction
-      value: You insulted me by mixing up the orders! This is not what I expected
-        from a noble deliveryman! Shame on your house and supervisor.
+      value: 'You insulted me by mixing up the orders! This is not what I''ve expected
+        from a noble delivery man! Shame on your house and supervisor. '
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: secretMatchReaction
-      value: What a beautiful monster! Not what I expected, but it will come in handy.
-        Thanks! Don't expect I toss a coin.
+      value: 'What a beautiful monster! Not what I expected, but it will come in
+        handy. Thanks! Don''t expect me tossing a coin. '
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: desiredMatchReaction
-      value: A mysterious creature whose very flesh speaks of powerful, dark magic...
-        And just in time! Good job, noble deliveryman! Look around more often - the
-        neighbors here are just monsters!
+      value: 'A mysterious creature whose very flesh speaks of powerful, dark magic...
+        And just in time! Good job, noble delivery man! Look around more often -
+        the neighbors here are just monsters! '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

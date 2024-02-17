@@ -82,8 +82,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: secretMatchReaction
-      value: Not mine order. Incorrect! But I need more power. It stays. You go.
-        Go out here, if you want to live! And have a nice day!
+      value: 'Not my order. Incorrect! But I need more power. It stays. You go. Go
+        out there, if you want to live! And have a nice day! '
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: desiredMatchReaction

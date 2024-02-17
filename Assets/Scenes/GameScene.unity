@@ -4367,10 +4367,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfd4535bcb245d6ba8f4f7b2d06d85b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spotCorrect: {fileID: 1982954438750715513, guid: bf0b2cd40d9574a468eb0e36e3113704, type: 3}
-  spotSecret: {fileID: -5376105210891777463, guid: 46f31bf741a69d4438cf7072173edfb1, type: 3}
-  spotWrong: {fileID: 21300000, guid: 4940fb04e36a0e34db25a9cdf11581f6, type: 3}
-  spotFacehugger: {fileID: 21300000, guid: 4940fb04e36a0e34db25a9cdf11581f6, type: 3}
+  spotCorrect: {fileID: -8747199535532507798, guid: f8c4801f665bfc94281b86bd7a89efb6, type: 3}
+  spotSecret: {fileID: -1763898749944080133, guid: dc0210b1cd1f24b4f9587a56ab1c81d7, type: 3}
+  spotWrong: {fileID: -4970810832189944610, guid: 454d7aa008248754798da8310f881d36, type: 3}
+  spotFacehugger: {fileID: -4970810832189944610, guid: 454d7aa008248754798da8310f881d36, type: 3}
 --- !u!4 &1435397374
 Transform:
   m_ObjectHideFlags: 0

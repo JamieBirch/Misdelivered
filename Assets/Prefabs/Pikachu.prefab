@@ -83,12 +83,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: secretMatchReaction
-      value: Pica-pica! This city is drowning in sins! Incorrect deliveries, confused
-        orders... I'll pull the thread and see where it leads me! Free! For now.
+      value: 'Pica-pica! This city is drowning in sins! Incorrect deliveries, confused
+        orders... I''ll pull the thread and see where it leads me! Free! For now. '
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: desiredMatchReaction
-      value: Pica-pica! Now they all taste my thunder! Thank you!
+      value: 'Pica-pica! Now they will all taste my thunder! Thank you! '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
