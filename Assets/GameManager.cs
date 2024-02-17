@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
     public AudioClip[] sighs;
 
     public GameObject packageButtons;
+    public GameObject FaceHuggerAnimObject;
+    public Animator FaceHuggerAnimator;
     
     private void Awake()
     {
@@ -98,6 +100,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("Giving " + package.name + " to " + currentRound.GetCharacter().name);
         //reaction
         ReactionOptions reaction = currentRound.GetCharacter().ReactToPackage(package);
+
+        if (reaction == ReactionOptions.Facehugger)
+        {
+            //specific facehugger actions
+            FaceHuggerAnimObject.SetActive(true);
+            FaceHuggerAnimator.Play("faceHuggerAnim");
+        }
         UpdatePlayerStats(reaction);
         CharacterReactionPanel.GetComponent<Image>().color = GetReactionColor(reaction);
         string reactionText = currentRound.GetCharacter().GetReaction(reaction);
@@ -219,6 +228,7 @@ public class GameManager : MonoBehaviour
         CharacterReactionPanel.SetActive(false);
         NextRoundButton.SetActive(false);
         packageReactionSpot.SetActive(false);
+        FaceHuggerAnimObject.SetActive(false);
     }
 
     private void AssignPackagesToButtons()
