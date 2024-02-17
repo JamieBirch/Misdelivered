@@ -22,6 +22,7 @@ public class SceneFader : MonoBehaviour
     
     public void FadeToWithDelay()
     {
+        
         Time.timeScale = 1f;
         Invoke(nameof(FadeToGameScreen), 3f);
     }
