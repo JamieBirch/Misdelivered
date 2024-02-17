@@ -1,10 +1,12 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
     public SceneFader sceneFader;
+    public AudioClip badEndingSound;
+    public AudioClip goodEndingSound;
+    
     public PlayerStats stats;
     public Text upText;
     public Text centerText;
