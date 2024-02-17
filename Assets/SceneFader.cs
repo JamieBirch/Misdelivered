@@ -12,7 +12,7 @@ public class SceneFader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(FadeIn());
+        // StartCoroutine(FadeIn());
     }
 
     public void FadeTo(string scene)
@@ -22,6 +22,7 @@ public class SceneFader : MonoBehaviour
     
     public void FadeToWithDelay()
     {
+        Time.timeScale = 1f;
         Invoke(nameof(FadeToGameScreen), 3f);
     }
     
