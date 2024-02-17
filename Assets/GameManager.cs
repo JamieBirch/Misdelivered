@@ -44,6 +44,9 @@ public class GameManager : MonoBehaviour
     public GameObject packageButtons;
     public GameObject FaceHuggerAnimObject;
     public Animator FaceHuggerAnimator;
+
+    public GameObject[] placesForAnnouncements;
+    public AnnouncementsDictionary AnnouncementsDictionary;
     
     private void Awake()
     {
@@ -207,12 +210,29 @@ public class GameManager : MonoBehaviour
 
         //Hide objects of prev. round
         HideEverything();
+        
+        //randomize places to place announcements
+        HashSet<GameObject> placesSet = new HashSet<GameObject>();
+        Random random = new Random();
+        int numberOfPlaces = random.Next(placesForAnnouncements.Length);
+        while (placesSet.Count != numberOfPlaces)
+        {
+            int index = random.Next(placesForAnnouncements.Length);
+            placesSet.Add(placesForAnnouncements[index]);
+        }
+
+        foreach (GameObject place in placesSet)
+        {
+            place.SetActive(true);
+            place.GetComponent<Image>().sprite = AnnouncementsDictionary.GetRandomSprite();
+        }
+        
 
         currentRound = scenario.GetRound(currentRoundIndex);
         //show door
         DoorPanel.ChangeDoor(currentRound.GetDoor().imageClosed);
         //TODO remove this line when testing finished
-        characterName.text = currentRound.GetCharacter().character.ToString();
+        // characterName.text = currentRound.GetCharacter().character.ToString();
 
         packageButtons.SetActive(true);
         AssignPackagesToButtons();
@@ -229,6 +249,11 @@ public class GameManager : MonoBehaviour
         NextRoundButton.SetActive(false);
         packageReactionSpot.SetActive(false);
         FaceHuggerAnimObject.SetActive(false);
+
+        foreach (GameObject announcement in placesForAnnouncements)
+        {
+            announcement.SetActive(false);
+        }
     }
 
     private void AssignPackagesToButtons()
@@ -335,5 +360,12 @@ public class GameManager : MonoBehaviour
     public void PlayButtonHoverSound()
     {
         SoundManager.PlaySound(SoundManager.Sound.sigh);
+    }
+    
+    static T GetRandomElement<T>(T[] array)
+    {
+        System.Random rand = new System.Random();
+        int randomIndex = rand.Next(0, array.Length);
+        return array[randomIndex];
     }
 }
