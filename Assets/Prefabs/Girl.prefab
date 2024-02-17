@@ -88,8 +88,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: desiredMatchReaction
-      value: "My kitten!\_ I'll call him Fluffy! Thank you, mister! Have a fluffy
-        day!"
+      value: My kitten! I'll call him Fluffy! Thank you, mister! Have a fluffy day!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

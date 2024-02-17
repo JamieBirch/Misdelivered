@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 4665878599964040819, guid: fc5a8372c1dc7f0408fa6b1b974c0293, type: 3}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: defaultReaction
-      value: That's not what I wanted. I'll be pay a visit to your manager!
+      value: Hs-s-s! That's not what I wanted. I'll pay a visit to your manager!
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: secretMatchReaction
@@ -83,7 +83,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: desiredMatchReaction
-      value: Just in time! Come onin, little one! You're not alien in here!
+      value: Just in time! Come on in, little one! You're not alien in here!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

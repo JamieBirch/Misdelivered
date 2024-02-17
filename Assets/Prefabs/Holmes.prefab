@@ -84,7 +84,7 @@ PrefabInstance:
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: secretMatchReaction
       value: Not my order... But I'll recognise a crime, when I see it, my good sir!
-        But where is the rest of victim? Curios, I love it!
+        But where is the rest of victim? Curious, I love it!
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: desiredMatchReaction

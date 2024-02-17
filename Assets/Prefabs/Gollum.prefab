@@ -79,7 +79,7 @@ PrefabInstance:
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: defaultReaction
       value: "That's not our precious! You stole our precious? You bad, evil! Where
-        you're hiding my precious? Give it back!\_Give it back! Why are you running?"
+        are you hiding my precious? Give it back!\_Give it back! Why are you running?"
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: secretMatchReaction
@@ -88,8 +88,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: desiredMatchReaction
-      value: My precious! Ah! Finally we found you!  And the ring also. Cool! Thx,
-        my precious!  Do you want some fish?
+      value: My precious! Ah! Finally we found you! And the ring also. Cool! Thank
+        you! Do you want some fish?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

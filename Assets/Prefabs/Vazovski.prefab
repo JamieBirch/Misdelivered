@@ -82,13 +82,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: secretMatchReaction
-      value: 'That''s not my order... But I''ll keep it! Need to do some mess cleaning,
-        get it? You get it? '
+      value: That's not my order... But I'll keep it! Need to do some mess cleaning,
+        get it? You get it?
       objectReference: {fileID: 0}
     - target: {fileID: 9132727039047721388, guid: be912bed03e91ea48bdcde7ecf562233, type: 3}
       propertyPath: desiredMatchReaction
-      value: 'Oh! A correct  door delivery! Fantastic! Now I''ve got an eye on you!
-        You get it? Get it? Haha, just kidding! See ya! '
+      value: Oh! A correct  door delivery! Fantastic! Now I've got an eye on you!
+        You get it? Get it? Haha, just kidding! See ya!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
