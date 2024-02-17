@@ -4,8 +4,6 @@ using UnityEngine.UI;
 public class GameOver : MonoBehaviour
 {
     public SceneFader sceneFader;
-    public AudioClip badEndingSound;
-    public AudioClip goodEndingSound;
     
     public PlayerStats stats;
     public Text upText;
@@ -28,6 +26,15 @@ public class GameOver : MonoBehaviour
         bottomText.text = "Secret deliveries: " + stats.showSecretDeliveries;
 
         totalCount = stats.showDesiredDeliveries + stats.showSecretDeliveries * 2;
+        
+        if (totalCount <= stats.showTotalDeliveries / 2)
+        {
+            SoundManager.PlaySound(SoundManager.Sound.badEnding);
+        }
+        else
+        {
+            SoundManager.PlaySound(SoundManager.Sound.goodEnding);
+        }
 
         conclusionText.text = GetFeedbackText();
     }

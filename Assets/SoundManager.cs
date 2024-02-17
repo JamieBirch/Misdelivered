@@ -13,7 +13,9 @@ public static class SoundManager
         facehuggerDelivery,
         portal,
         sigh,
-        soundTrack
+        soundTrack,
+        badEnding,
+        goodEnding
     }
 
     private static Dictionary<Sound, float> soundTimerDictionary;
