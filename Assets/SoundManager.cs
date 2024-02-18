@@ -88,7 +88,10 @@ public static class SoundManager
             AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
             audioSource.loop = true;
             audioSource.volume = 0.2f;
-            audioSource.PlayOneShot(GetAudioClip(Sound.soundTrack));
+            audioSource.clip = GetAudioClip(Sound.soundTrack);
+            // audioSource.Play(GetAudioClip(Sound.soundTrack));
+            // audioSource.PlayOneShot(GetAudioClip(Sound.soundTrack));
+            audioSource.Play();
         // }
     }
     
